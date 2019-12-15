@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+# C extensions
+*.so
+*.o
+# Distribution / packaging
+build/
+*.metadata
+*.vscode
