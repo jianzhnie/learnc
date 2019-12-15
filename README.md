@@ -17,5 +17,5 @@ By Jianzhnie
 
 ### 其他链接
 1. [ 浙江大学PAT题解](https://github.com/liuchuo/PAT)
-2. [技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计、Java、Python、C++](https://github.com/CyC2018/CS-Notes)
+2. [计算机必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计、Java、Python、C++](https://github.com/CyC2018/CS-Notes)
 3. [C/C++ 技术面试基础知识总结，包括语言、程序库、数据结构、算法、系统、网络、链接装载库等知识](https://github.com/huihut/interview)
