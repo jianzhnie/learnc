@@ -6,13 +6,13 @@ By Jianzhnie
 建立这个项的目的是为了学习 C++ 编程，用来督促自己每天更新，每天进步一点点。
 
 ### Contents
-1. [牛客网 PAT乙级(Basic Level)真题](https://www.nowcoder.com/pat/6/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/pateasy1)
+1. [PAT乙级(Basic Level)真题](https://www.nowcoder.com/pat/6/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/pateasy1)
 
-2. [牛客网 PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[待更新]()
+2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[待更新]()
 
-3. [牛客网 PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[待更新]()
+3. [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[待更新]()
 
-4. [牛客网 PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
+4. [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
 
 
 ### 其他链接
