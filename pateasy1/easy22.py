@@ -2,7 +2,6 @@ N = int(input())
 dict1 ={}
 for i in range(N):
     id, score = list(input().split())
-    id = str(id)
     score = int(score)
     if id in dict1:
         dict1[id]+=score
