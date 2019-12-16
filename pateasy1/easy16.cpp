@@ -1,42 +1,25 @@
-/*
-本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印
- *****
-  ***
-   *
-  ***
- *****
-所谓“沙漏形状”，是指每行输出奇数个符号；各行符号中心对齐；相邻两行符号数差2；符号数先从大到小顺序递减到1，再从小到大顺序递
-增；首尾符号数相等。
-给定任意N个符号，不一定能正好组成一个沙漏。要求打印出的沙漏能用掉尽可能多的符号。
-*/
+/*要获得一个C语言程序的运行时间，常用的方法是调用头文件time.h，其中提供了clock()函数，可以捕捉从程序开始运行到clock()被调用时所
+耗费的时间。这个时间单位是clock tick，即“时钟打点”。同时还有一个常数CLK_TCK，给出了机器时钟每秒所走的时钟打点数。于是为了获
+得一个函数f的运行时间，我们只要在调用f之前先调用clock()，获得一个时钟打点数C1；在f执行完成后再调用clock()，获得另一个时钟打点
+数C2；两次获得的时钟打点数之差(C2-C1)就是f运行所消耗的时钟打点数，再除以常数CLK_TCK，就得到了以秒为单位的运行时间。
+
+这里不妨简单假设常数CLK_TCK为100。现给定被测函数前后两次获得的时钟打点数，请你给出被测函数运行的时间。*/
 
 # include <iostream>
-# include <string>
-# include <math.h>
+#include <stdio.h>
+# include <time.h>
 using namespace std;
 
 int main(){
-    int n,d;
-    char s;
-    cin>>n>>s;
-    d = (int)sqrt((n+1)/2); // 根据等差数列求出需要打印的行数及每一行打印的字符个数
-    for (int i=0; i<d; i++){
-        int count=2*d-1-2*i;
-        for(int j=0;j<i;j++) // 用来打印空白字符
-            cout<<" ";
-        for(int j=0; j<count; j++) //用来打印空字符串
-            cout<<s;
-        cout<<endl;
-    }
-    for (int i=2; i<=d; i++){
-        int count=2*i-1;
-        for(int j=0;j<d-i;j++) // 用来打印空白字符
-            cout<<" ";
-        for(int j=0; j<count; j++)//用来打印空字符串
-            cout<<s;
-        cout<<endl;
-    }
-    int r = n+1 - 2*d*d; // 需要用到的字符串个数 2×d*d
-    cout <<r<<endl;
+
+    int c1,c2;
+    cin>>c1>>c2;
+    int h,m,s=0;
+    int time =(int)(1.0 * (c2 - c1) / 100 + 0.5);
+    h = time/3600;
+    time %=3600;
+    m = time/60;
+    s = time%60;
+    printf("%02d:%02d:%02d\n",h,m,s);
     return 0;
 }
