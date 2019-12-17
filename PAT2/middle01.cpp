@@ -43,18 +43,19 @@ int main()
             }
         }
         sort(peanut.begin(), peanut.end());
- 
+        //首先对 vector 结构体 peanut 进行了排序， 
+        //接下来只需要顺序对 peanut 中的元素进行操作即可
         // 计算
         rlt = 0;
         if(peanut.size()) {
             tempY = peanut[0].y; tempX = 0;
             for(int i=0; i<peanut.size(); i++) {
                 dist = abs(tempX-peanut[i].x) + abs(tempY-peanut[i].y)+1;
-                if(K >= dist + peanut[i].x) {
-                    K -= dist;
+                if(K >= dist + peanut[i].x) { // 每次执行之前都需要判断一下剩余时间是否够返回
+                    K -= dist;               // 执行任务之后，减去需要花的时间
                     tempX = peanut[i].x;
-                    tempY = peanut[i].y;
-                    rlt += peanut[i].amount;
+                    tempY = peanut[i].y;     // 更新当前的位置坐标
+                    rlt += peanut[i].amount; // 收获值增加
                 } else {
                     break;
                 }
