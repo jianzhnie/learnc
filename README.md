@@ -8,7 +8,7 @@ By Jianzhnie
 ### Contents
 1. [PAT乙级(Basic Level)真题](https://www.nowcoder.com/pat/6/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/PAT1)
 
-2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[待更新](https://github.com/jianzhnie/learnc/tree/master/PAT2)
+2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/PAT2)
 
 3. [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[待更新]()
 
