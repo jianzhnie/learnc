@@ -1,5 +1,6 @@
 //约瑟夫问题  顺序表最典型的应用 
-#include<stdio.h>
+# include<stdio.h>
+# include<list>
 
 int main(){
     int n, m;
