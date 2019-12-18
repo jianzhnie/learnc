@@ -24,11 +24,11 @@ int main(){
     while(scanf("%ld %d", &n)!=EOF){
         for (int r=2; r<=16; r++){
             stack <int> stk;
-            while (sum) {
-                stk.push(sum%r);
-            sum /= r;
+            while (n) {
+                stk.push(n%r);
+                n /= r;
         }
-            res = IsHuiWen();
+            res = IsHuiWen(n);
         }
 
 
