@@ -5,18 +5,18 @@ using namespace std;
  //辗转相除法求最大公约数
  int gcd(int x,int y)
  {
-     int t;
-     while(y)
-     {
-         t=x%y;
-         x=y;
-         y=t;
-     }
-     return  x;
+    int t;
+    while(y)
+    {
+        t=x%y;
+        x=y;
+        y=t;
+    }
+    return  x;
  }
   
- int main()
- {
+int main()
+{
     int n;
     cin >> n;
     vector<long long> numerator(n);    //存储分子部分
@@ -27,7 +27,6 @@ using namespace std;
     for (int i=0; i<n; i++)
     {
         cin >> a >> c >> b;
-        cout<<a<<c<<b;
         numerator[i] = a;
         denominator[i] = b;
         product *= b;
@@ -62,4 +61,4 @@ using namespace std;
     if (num != 0)
         cout << num << " ";
     cout << a << "/" << b;
- }
+}
