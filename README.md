@@ -19,3 +19,11 @@ By Jianzhnie
 1. [ 浙江大学PAT题解](https://github.com/liuchuo/PAT)
 2. [计算机必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计、Java、Python、C++](https://github.com/CyC2018/CS-Notes)
 3. [C/C++ 技术面试基础知识总结，包括语言、程序库、数据结构、算法、系统、网络、链接装载库等知识](https://github.com/huihut/interview)
+4. [动画演示 「LeetCode题目」](https://github.com/MisterBooo/LeetCodeAnimation)
+5. [动画演示「数据结构与算法」内容 ](https://www.cxyxiaowu.com/leetcodeanimation)
+6. [动画过程展示排序/链表/队列/二叉树/图](https://visualgo.net/zh)
+
+### 经验贴
+1. [算法成神之路 -斩获BAToffer手撕红黑树的剑谱兄](http%3A//t.cn/ELbVOZ7)
+2. [july大神 CSDN博客阅读量前100名](https%3A//blog.csdn.net/v_JULY_v/article/details/19131887)
+3. [牛客网左神-左程云：程序员该如何学习算法？](https%3A//www.nowcoder.com/discuss/61529)
