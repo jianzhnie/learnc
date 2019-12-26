@@ -1,7 +1,8 @@
 # include <iostream>
 # include <algorithm>
+# include <map>
 using namespace std;
-#define MAX 2000
+#define MAX 2005
 
 struct student
 {
@@ -17,8 +18,9 @@ bool cmp(student a, student b){
 }
 
 int main(){
-
-    int n, m, id;
+    int n, m;
+    string id;
+    map<string, int> idmap; 
     cin>>n>>m;
     for (int i = 0; i < n; i++)
     {
@@ -34,9 +36,7 @@ int main(){
                 stu[i].rank[flag] = stu[i-1].rank[flag];
         }
     }
-    
     for(int i = 0; i < n; i++) {
-        exist[stu[i].id] = i + 1;
         stu[i].best = 0;
         int minn = stu[i].rank[0];
         for(int j = 1; j <= 3; j++) {
@@ -45,7 +45,21 @@ int main(){
                 stu[i].best = j;
             }
         }
+        idmap[stu[i].id] = i+1;
     }
-
+    char c[5] = {'A', 'C', 'M', 'E'};
+    for(int i = 0; i < m; i++) {
+        cin>>id;
+        int idx = idmap[id];
+        if (idx){
+            idx -=1;
+            int best = stu[idx].best;
+            cout<<stu[idx].rank[best]<<" "<<c[best]<<"\n";
+        }
+        else
+        {
+            cout<<"N/A\n";
+        }
+    }
     return 0;
 }

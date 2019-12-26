@@ -3,7 +3,7 @@ By Jianzhnie
 ## Introduction
 建立这个项目是为了学习 C++ 编程，用来督促自己每天更新，每天进步。
 
-## 1. 第一部分:学习篇
+## 1. 学习篇
 
 ### 1.1 常见的数据结构和算法
 - 数据结构：链表、栈、队列、字符串、矩阵、树、图
@@ -15,7 +15,7 @@ By Jianzhnie
 3. [algorithms-and-data-structure-using-python](https://github.com/facert/python-data-structure-cn)
 
 
-## 2. 第二部分:编程实战篇
+## 2. 编程实战篇
 1. [PAT乙级(Basic Level)真题](https://www.nowcoder.com/pat/6/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/PAT1)
 2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/PAT2)
 3. [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[待更新]()
