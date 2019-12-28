@@ -1,15 +1,20 @@
-# C++ 代码练习
+# Learning C++
 By Jianzhnie
 ## Introduction
 建立这个项目是为了学习 C++ 编程，用来督促自己每天更新，每天进步。
 
 ## 1. 学习篇
+### 1.1 C++ Primer(5 th)习题解答
+- Part I: The Basics (ch2~ch6)
+- Part II: The C++ Library (ch8~ch12)
+- Part III: Tools for Class Authors (ch13~ch16)
+- Part IV: Advanced Topics (ch17~ch19) 
 
-### 1.1 常见的数据结构和算法
+### 1.2 常见的数据结构和算法
 - 数据结构：链表、栈、队列、字符串、矩阵、树、图
 - 算法：排序、字符串、数组、递归、五大算法(动态规划、贪心)
 
-### 1.2 算法实现代码库
+### 1.3 算法实现代码库
 1. [algorithms_and_data_structures](https://github.com/mandliya/algorithms_and_data_structures)
 2. [Algorithms & Data Structures in C++](https://github.com/xtaci/algorithms)
 3. [algorithms-and-data-structure-using-python](https://github.com/facert/python-data-structure-cn)
