@@ -5,10 +5,10 @@ By Jianzhnie
 
 ## 1. 学习篇
 ### 1.1 C++ Primer(5 th)习题解答
-- Part I: The Basics (ch2~ch6)
-- Part II: The C++ Library (ch8~ch12)
-- Part III: Tools for Class Authors (ch13~ch16)
-- Part IV: Advanced Topics (ch17~ch19) 
+- Part I: The Basics (ch2~ch6) [C++ Code]()
+- Part II: The C++ Library (ch8~ch12)[C++ Code]()
+- Part III: Tools for Class Authors (ch13~ch16)[C++ Code]()
+- Part IV: Advanced Topics (ch17~ch19) [C++ Code]()
 
 ### 1.2 常见的数据结构和算法
 - 数据结构：链表、栈、队列、字符串、矩阵、树、图
@@ -21,10 +21,10 @@ By Jianzhnie
 
 
 ## 2. 编程实战篇
-1. [PAT乙级(Basic Level)真题](https://www.nowcoder.com/pat/6/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/PAT1)
-2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/PAT2)
-3. [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[待更新]()
-4. [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
+1. [PAT乙级(Basic Level)真题](https://www.nowcoder.com/pat/6/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PATeasy2)
+2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PATeasy1)
+3. [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PAThard2)
+4. [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PAThard1)
 5. [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
 
 
