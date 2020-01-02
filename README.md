@@ -25,7 +25,7 @@ By Jianzhnie
 2. [PAT乙级(Basic Level)练习题](https://www.nowcoder.com/pat/2/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PATeasy1)
 3. [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PAThard2)
 4. [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PAThard1)
-5. [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
+5. [PAT顶级(Top Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
 
 
 ## 3. 其他链接
