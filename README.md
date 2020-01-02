@@ -27,8 +27,8 @@ By Jianzhnie
 - [PAT甲级(Advanced Level)真题](https://www.nowcoder.com/pat/5/problems)  代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PAThard2)
 - [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[C++ Code](https://github.com/jianzhnie/learnc/tree/master/Programming-Ability-Test/PAThard1)
 - [PAT甲级(Advanced Level)练习题](https://www.nowcoder.com/pat/1/problems) 代码[待更新]()
-2. [剑指offer]() 代码[C++ Code]() || [python code]()
-3. [leetcode]() 代码[C++ Code]() || [python code]()
+2. [剑指offer]() 代码[C++ Code]() || [Python Code]()
+3. [leetcode]() 代码[C++ Code]() || [Python Code]()
 
 ## 3. 其他链接
 1. [ 浙江大学PAT题解](https://github.com/liuchuo/PAT)
