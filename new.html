@@ -1,0 +1,457 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>A new Page md &#8212; 123  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to 123’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="a-new-page-md">
+<h1>A new Page md<a class="headerlink" href="#a-new-page-md" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="sphinx">
+<h1>Sphinx快速制作代码文档<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><a class="reference external" href="https://www.sphinx.org.cn/usage/quickstart.html">Sphinx</a> 是什么<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx 是一种文档工具，它可以令人轻松的撰写出清晰且优美的文档, 由 Georg Brandl 在BSD 许可证下开发. 新版的Python文档就是由Sphinx生成的， 并且它已成为Python项目首选的文档工具,同时它对 C/C++ 项目也有很好的支持; 并计划对其它开发语言添加特殊支持. 本站当然也是使用 Sphinx 生成的，它采用reStructuredText! Sphinx还在继续开发. 下面列出了其良好特性,这些特性在Python官方文档中均有体现:</p>
+<ul class="simple">
+<li>丰富的输出格式: 支持 HTML (包括 Windows 帮助文档), LaTeX (可以打印PDF版本), manual pages（man 文档）, 纯文本</li>
+<li>完备的交叉引用: 语义化的标签,并可以自动化链接函数,类,引文,术语及相似的片段信息</li>
+<li>明晰的分层结构: 可以轻松的定义文档树,并自动化链接同级/父级/下级文章</li>
+<li>美观的自动索引: 可自动生成美观的模块索引</li>
+<li>精确的语法高亮: 基于 Pygments 自动生成语法高亮</li>
+<li>开放的扩展: 支持代码块的自动测试,并包含Python模块的自述文档(API docs)等</li>
+</ul>
+<p>Sphinx 使用 reStructuredText 作为标记语言, 可以享有 Docutils 为reStructuredText提供的分析，转换等多种工具.</p>
+</div>
+<div class="section" id="id2">
+<h2>安装Sphinx<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx为Python语言的一个第三方库。我们需要在终端中输入下列命令进行安装：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx_rtd_theme</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">recommonmark</span>
+</pre></div>
+</div>
+<p>第一个包是sphinx，第二个包是sphinx的主题包，非常好看。</p>
+</div>
+<div class="section" id="id3">
+<h2>创建Sphinx项目<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx可以嵌入到已有的python项目中，假设现在有一个Python项目名为learn_sphinx，其中源代码均放置于src文件夹. 然后在项目中创建doc文件夹,用于存放文档，然后在该文件夹路径下运行下列命令快速生成Sphinx项目：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">./</span><span class="n">doc</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+<p>接下来会让你选择一些配置：</p>
+<ol class="simple">
+<li>设置文档的根路径（回车，使用默认设置）</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">the</span> <span class="n">root</span> <span class="n">path</span> <span class="k">for</span> <span class="n">documentation</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Root</span> <span class="n">path</span> <span class="k">for</span> <span class="n">the</span> <span class="n">documentation</span> <span class="p">[</span><span class="o">.</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>是否分离source和build目录（输入y,选择分离，方便管理）</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">You</span> <span class="n">have</span> <span class="n">two</span> <span class="n">options</span> <span class="k">for</span> <span class="n">placing</span> <span class="n">the</span> <span class="n">build</span> <span class="n">directory</span> <span class="k">for</span> <span class="n">Sphinx</span> <span class="n">output</span><span class="o">.</span>
+<span class="n">Either</span><span class="p">,</span> <span class="n">you</span> <span class="n">use</span> <span class="n">a</span> <span class="n">directory</span> <span class="s2">&quot;_build&quot;</span> <span class="n">within</span> <span class="n">the</span> <span class="n">root</span> <span class="n">path</span><span class="p">,</span> <span class="ow">or</span> <span class="n">you</span> <span class="n">separate</span>
+<span class="s2">&quot;source&quot;</span> <span class="ow">and</span> <span class="s2">&quot;build&quot;</span> <span class="n">directories</span> <span class="n">within</span> <span class="n">the</span> <span class="n">root</span> <span class="n">path</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Separate</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">directories</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>设定模板前缀（回车，使用默认选项）</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Inside</span> <span class="n">the</span> <span class="n">root</span> <span class="n">directory</span><span class="p">,</span> <span class="n">two</span> <span class="n">more</span> <span class="n">directories</span> <span class="n">will</span> <span class="n">be</span> <span class="n">created</span><span class="p">;</span> <span class="s2">&quot;_templates&quot;</span>
+<span class="k">for</span> <span class="n">custom</span> <span class="n">HTML</span> <span class="n">templates</span> <span class="ow">and</span> <span class="s2">&quot;_static&quot;</span> <span class="k">for</span> <span class="n">custom</span> <span class="n">stylesheets</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">static</span>
+<span class="n">files</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">enter</span> <span class="n">another</span> <span class="n">prefix</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="n">to</span> <span class="n">replace</span> <span class="n">the</span> <span class="n">underscore</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Name</span> <span class="n">prefix</span> <span class="k">for</span> <span class="n">templates</span> <span class="ow">and</span> <span class="n">static</span> <span class="nb">dir</span> <span class="p">[</span><span class="n">_</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>输入项目名称和作者</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">project</span> <span class="n">name</span> <span class="n">will</span> <span class="n">occur</span> <span class="ow">in</span> <span class="n">several</span> <span class="n">places</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">built</span> <span class="n">documentation</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">name</span><span class="p">:</span> <span class="n">Sphinx</span><span class="o">-</span><span class="n">test</span>
+<span class="o">&gt;</span> <span class="n">Author</span> <span class="n">name</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="n">test</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>输入项目版本号</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sphinx</span> <span class="n">has</span> <span class="n">the</span> <span class="n">notion</span> <span class="n">of</span> <span class="n">a</span> <span class="s2">&quot;version&quot;</span> <span class="ow">and</span> <span class="n">a</span> <span class="s2">&quot;release&quot;</span> <span class="k">for</span> <span class="n">the</span>
+<span class="n">software</span><span class="o">.</span> <span class="n">Each</span> <span class="n">version</span> <span class="n">can</span> <span class="n">have</span> <span class="n">multiple</span> <span class="n">releases</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="k">for</span>
+<span class="n">Python</span> <span class="n">the</span> <span class="n">version</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">like</span> <span class="mf">2.5</span> <span class="ow">or</span> <span class="mf">3.0</span><span class="p">,</span> <span class="k">while</span> <span class="n">the</span> <span class="n">release</span> <span class="ow">is</span>
+<span class="n">something</span> <span class="n">like</span> <span class="mf">2.5</span><span class="o">.</span><span class="mi">1</span> <span class="ow">or</span> <span class="mf">3.0</span><span class="n">a1</span><span class="o">.</span>  <span class="n">If</span> <span class="n">you</span> <span class="n">don</span><span class="s1">&#39;t need this dual structure,</span>
+<span class="n">just</span> <span class="nb">set</span> <span class="n">both</span> <span class="n">to</span> <span class="n">the</span> <span class="n">same</span> <span class="n">value</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">version</span> <span class="p">[]:</span> <span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">release</span> <span class="p">[</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>文档语言（回车，默认即可）</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">If</span> <span class="n">the</span> <span class="n">documents</span> <span class="n">are</span> <span class="n">to</span> <span class="n">be</span> <span class="n">written</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">language</span> <span class="n">other</span> <span class="n">than</span> <span class="n">English</span><span class="p">,</span>
+<span class="n">you</span> <span class="n">can</span> <span class="n">select</span> <span class="n">a</span> <span class="n">language</span> <span class="n">here</span> <span class="n">by</span> <span class="n">its</span> <span class="n">language</span> <span class="n">code</span><span class="o">.</span> <span class="n">Sphinx</span> <span class="n">will</span> <span class="n">then</span>
+<span class="n">translate</span> <span class="n">text</span> <span class="n">that</span> <span class="n">it</span> <span class="n">generates</span> <span class="n">into</span> <span class="n">that</span> <span class="n">language</span><span class="o">.</span>
+
+<span class="n">For</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">supported</span> <span class="n">codes</span><span class="p">,</span> <span class="n">see</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">sphinx</span><span class="o">-</span><span class="n">doc</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">html</span><span class="c1">#confval-language.</span>
+<span class="o">&gt;</span> <span class="n">Project</span> <span class="n">language</span> <span class="p">[</span><span class="n">en</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>设定文档文就按的后缀</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">file</span> <span class="n">name</span> <span class="n">suffix</span> <span class="k">for</span> <span class="n">source</span> <span class="n">files</span><span class="o">.</span> <span class="n">Commonly</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">either</span> <span class="s2">&quot;.txt&quot;</span>
+<span class="ow">or</span> <span class="s2">&quot;.rst&quot;</span><span class="o">.</span>  <span class="n">Only</span> <span class="n">files</span> <span class="k">with</span> <span class="n">this</span> <span class="n">suffix</span> <span class="n">are</span> <span class="n">considered</span> <span class="n">documents</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Source</span> <span class="n">file</span> <span class="n">suffix</span> <span class="p">[</span><span class="o">.</span><span class="n">rst</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>设定首页名称（回车，选择默认index即可）</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">One</span> <span class="n">document</span> <span class="ow">is</span> <span class="n">special</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">considered</span> <span class="n">the</span> <span class="n">top</span> <span class="n">node</span> <span class="n">of</span> <span class="n">the</span>
+<span class="s2">&quot;contents tree&quot;</span><span class="p">,</span> <span class="n">that</span> <span class="ow">is</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">root</span> <span class="n">of</span> <span class="n">the</span> <span class="n">hierarchical</span> <span class="n">structure</span>
+<span class="n">of</span> <span class="n">the</span> <span class="n">documents</span><span class="o">.</span> <span class="n">Normally</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="n">but</span> <span class="k">if</span> <span class="n">your</span> <span class="s2">&quot;index&quot;</span>
+<span class="n">document</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">template</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">also</span> <span class="nb">set</span> <span class="n">this</span> <span class="n">to</span> <span class="n">another</span> <span class="n">filename</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">your</span> <span class="n">master</span> <span class="n">document</span> <span class="p">(</span><span class="n">without</span> <span class="n">suffix</span><span class="p">)</span> <span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>根据需要选择是否开启epub输出(一般用不到，回车默认不开启即可)</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sphinx</span> <span class="n">can</span> <span class="n">also</span> <span class="n">add</span> <span class="n">configuration</span> <span class="k">for</span> <span class="n">epub</span> <span class="n">output</span><span class="p">:</span>
+<span class="o">&gt;</span> <span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">use</span> <span class="n">the</span> <span class="n">epub</span> <span class="n">builder</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>根据需求选择是否开启相应的Sphinx拓展功能</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Please</span> <span class="n">indicate</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">use</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">Sphinx</span> <span class="n">extensions</span><span class="p">:</span>
+<span class="o">&gt;</span> <span class="n">autodoc</span><span class="p">:</span> <span class="n">automatically</span> <span class="n">insert</span> <span class="n">docstrings</span> <span class="kn">from</span> <span class="nn">modules</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">doctest</span><span class="p">:</span> <span class="n">automatically</span> <span class="n">test</span> <span class="n">code</span> <span class="n">snippets</span> <span class="ow">in</span> <span class="n">doctest</span> <span class="n">blocks</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">intersphinx</span><span class="p">:</span> <span class="n">link</span> <span class="n">between</span> <span class="n">Sphinx</span> <span class="n">documentation</span> <span class="n">of</span> <span class="n">different</span> <span class="n">projects</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">todo</span><span class="p">:</span> <span class="n">write</span> <span class="s2">&quot;todo&quot;</span> <span class="n">entries</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">shown</span> <span class="ow">or</span> <span class="n">hidden</span> <span class="n">on</span> <span class="n">build</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">coverage</span><span class="p">:</span> <span class="n">checks</span> <span class="k">for</span> <span class="n">documentation</span> <span class="n">coverage</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">imgmath</span><span class="p">:</span> <span class="n">include</span> <span class="n">math</span><span class="p">,</span> <span class="n">rendered</span> <span class="k">as</span> <span class="n">PNG</span> <span class="ow">or</span> <span class="n">SVG</span> <span class="n">images</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">mathjax</span><span class="p">:</span> <span class="n">include</span> <span class="n">math</span><span class="p">,</span> <span class="n">rendered</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">browser</span> <span class="n">by</span> <span class="n">MathJax</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="n">Note</span><span class="p">:</span> <span class="n">imgmath</span> <span class="ow">and</span> <span class="n">mathjax</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">enabled</span> <span class="n">at</span> <span class="n">the</span> <span class="n">same</span> <span class="n">time</span><span class="o">.</span>
+<span class="n">imgmath</span> <span class="n">has</span> <span class="n">been</span> <span class="n">deselected</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">ifconfig</span><span class="p">:</span> <span class="n">conditional</span> <span class="n">inclusion</span> <span class="n">of</span> <span class="n">content</span> <span class="n">based</span> <span class="n">on</span> <span class="n">config</span> <span class="n">values</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">viewcode</span><span class="p">:</span> <span class="n">include</span> <span class="n">links</span> <span class="n">to</span> <span class="n">the</span> <span class="n">source</span> <span class="n">code</span> <span class="n">of</span> <span class="n">documented</span> <span class="n">Python</span> <span class="n">objects</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">y</span>
+<span class="o">&gt;</span> <span class="n">githubpages</span><span class="p">:</span> <span class="n">create</span> <span class="o">.</span><span class="n">nojekyll</span> <span class="n">file</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">the</span> <span class="n">document</span> <span class="n">on</span> <span class="n">GitHub</span> <span class="n">pages</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">n</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>创建项目</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A Makefile and a Windows command file can be generated for you so that you
+only have to run e.g. `make html&#39; instead of invoking sphinx-build
+directly.
+&gt; Create Makefile? (y/n) [y]: y
+&gt; Create Windows command file? (y/n) [y]: y
+
+Creating file ./conf.py.
+Creating file ./index.rst,.md.
+Creating file ./Makefile.
+Creating file ./make.bat.
+
+Finished: An initial directory structure has been created.
+
+You should now populate your master file ./index.rst,.md and create other documentation
+source files. Use the Makefile to build the docs, like so:
+   make builder
+where &quot;builder&quot; is one of the supported builders, e.g. html, latex or linkcheck.
+</pre></div>
+</div>
+<p>项目创建以后, doc的目录结构如下所示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── build
+├── make.bat
+├── Makefile
+└── source
+    ├── conf.py
+    ├── index.rst
+    ├── _static
+    └── _templates
+</pre></div>
+</div>
+<p>其中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>build:用来存放通过make html生成文档网页文件的目录
+source：存放用于生成文档的源文件
+conf.py: Sphinx的配置文件
+index.rst: 主文档
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>定义文档结构<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>主文档index.rst的主要功能是被转换成欢迎页, 它包含一个目录表（ “table of contents tree”或者 toctree ). Sphinx 主要功能是使用 reStructuredText 将许多文件组织成一份结构合理的文档.</p>
+<p>toctree指令初始值如下：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>你可以在 content 的位置添加文档列表:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+
+   <span class="n">tutorial</span><span class="o">.</span><span class="n">md</span>
+   <span class="o">...</span>
+</pre></div>
+</div>
+<p>注：tutorial.md 文档文件放在与index.rst同级目录下。</p>
+</div>
+<div class="section" id="markdown">
+<h2>支持markdown文件、更改文档主题<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<p>Spinx本身不支持.md文件生成文档，需要我们使用第三方库recommonmark进行转换。 首先分别运行下列命令安装recommonmark与sphinx_rtd_theme库。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">recommonmark</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx_rtd_theme</span>
+</pre></div>
+</div>
+<p>创建好之后需要对source/conf.py进行配置，使sphinx支持markdown，指定python代码的路径，并添加插件支持生成文档和公式渲染</p>
+<ul class="simple">
+<li>支持markdown</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="k">import</span> <span class="n">CommonMarkParser</span>
+<span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="n">CommonMarkParser</span><span class="p">,</span>
+    <span class="s1">&#39;.MD&#39;</span><span class="p">:</span> <span class="n">CommonMarkParser</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.rst&#39;</span><span class="p">,</span> <span class="s1">&#39;.md&#39;</span><span class="p">,</span> <span class="s1">&#39;.MD&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>设置python项目代码路径</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="k">import</span> <span class="n">CommonMarkParser</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../src&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>注意：将path中的src替换你目标文件的名字，例如dmmo文件夹下有所有代码文件，则修改src为dmmo</p>
+<ul class="simple">
+<li>添加扩展</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.doctest&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.intersphinx&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.coverage&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.ifconfig&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinx.ext.githubpages&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sphinxcontrib.fulltoc&#39;</span><span class="p">,</span>
+ <span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>主题
+Sphinx 提供很多主题，去官网选择，你会发现很多主题都是很熟悉，如果你用Python的话。默认是使用Flask一样的主题，找到 html_theme，将参数修改为：</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>根据注释生成文档<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>首先需要在src/文件夹的代码中按照规范添加注释</p>
+<p>对于类：注意介绍和参数中间的空行</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   Cat class A animal #intro</span>
+<span class="sd">    </span>
+<span class="sd">   :cvar str name: the cat&#39;s name</span>
+<span class="sd">   :cvar int size: the cat&#39;s size</span>
+<span class="sd">   :cvar int age: the cat&#39;s age</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       class init function</span>
+
+<span class="sd">       :param str name: cat&#39;s name</span>
+<span class="sd">       :param int size: cat&#39;s size</span>
+<span class="sd">       :param int age: cat&#39;s age</span>
+<span class="sd">       &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+</pre></div>
+</div>
+<p>对于函数：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dummy_print</span><span class="p">(</span><span class="n">something</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   a print function which is the same as the original func</span>
+
+<span class="sd">   :param str something: a str you want to print</span>
+<span class="sd">   :return: no return</span>
+
+<span class="sd">   这是一个简单的例子：</span>
+
+<span class="sd">   Example</span>
+<span class="sd">   -------</span>
+<span class="sd">   &gt;&gt;&gt; dummy_print(&quot;hello&quot;)</span>
+<span class="sd">   hello</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>之后在doc路径下执行：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">f</span> <span class="o">-</span><span class="n">o</span> <span class="o">./</span><span class="n">source</span> <span class="o">../</span><span class="n">src</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>就可以看到在doc/source中得到了对应的.rst文件. (-f 表示是如果已经有之前生成的.rst文件，则会删除重新生成)</p>
+</div>
+<div class="section" id="id6">
+<h2>文档发布<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>在doc文件夹下执行</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>即可在build/html中得到生成的静态网页文件，默认首页是index.html.</p>
+</div>
+<div class="section" id="id7">
+<h2>发布单独页面<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>可以自己编辑一份markdown页面，然后指定发布。对于没有数学公式和表格的markdown可以直接使用Sphinx对md文件发布。
+首先编辑一份markdown文档，保存在source文件夹中，命名为newpage.md</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>然后在index.rst文档中添加该md文档，注意前面的空格数量是3个</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Welcome to learn_sphinx&#39;s documentation!
+========================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   newpage.md
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+</pre></div>
+</div>
+<p>然后 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>, 在首页可以看到新的页面
+可以看到标题和代码部分均正常显示，但是表格和公式均无法正常显示</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">123</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">A new Page md</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sphinx">Sphinx快速制作代码文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Sphinx 是什么</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">安装Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">创建Sphinx项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">定义文档结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markdown">支持markdown文件、更改文档主题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">根据注释生成文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">文档发布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">发布单独页面</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to 123’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, 123.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/new.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
